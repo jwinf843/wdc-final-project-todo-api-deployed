@@ -5,7 +5,7 @@ from todos_app.models import Todo
 
 
 @pytest.mark.django_db
-def test_todo_list(django_app):
+def test_todo_list_1(django_app):
     t1 = Todo.objects.create(title='Test Todo 1')
     t2 = Todo.objects.create(title='Test Todo 2', completed=True)
     t3 = Todo.objects.create(title='Test Todo 3')
@@ -36,7 +36,7 @@ def test_todo_list(django_app):
 
 
 @pytest.mark.django_db
-def test_todo_list_filter_active(django_app):
+def test_todo_list_filter_active_2(django_app):
     t1 = Todo.objects.create(title='Test Todo 1')
     t2 = Todo.objects.create(title='Test Todo 2', completed=True)
     t3 = Todo.objects.create(title='Test Todo 3')
@@ -63,7 +63,7 @@ def test_todo_list_filter_active(django_app):
 
 
 @pytest.mark.django_db
-def test_todo_list_filter_completed(django_app):
+def test_todo_list_filter_completed_3(django_app):
     t1 = Todo.objects.create(title='Test Todo 1')
     t2 = Todo.objects.create(title='Test Todo 2', completed=True)
     t3 = Todo.objects.create(title='Test Todo 3')

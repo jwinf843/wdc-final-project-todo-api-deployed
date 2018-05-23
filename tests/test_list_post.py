@@ -6,7 +6,7 @@ from todos_app.models import Todo
 
 
 @pytest.mark.django_db
-def test_todo_post_only_title(django_app):
+def test_todo_post_only_title_1(django_app):
     # Preconditions: No TODOs created
     assert Todo.objects.count() == 0
 
@@ -26,7 +26,7 @@ def test_todo_post_only_title(django_app):
 
 
 @pytest.mark.django_db
-def test_todo_post_title_completed(django_app):
+def test_todo_post_title_completed_2(django_app):
     # Preconditions: No TODOs created
     assert Todo.objects.count() == 0
 
@@ -47,7 +47,7 @@ def test_todo_post_title_completed(django_app):
 
 
 @pytest.mark.django_db
-def test_todo_post_missing_required_params(django_app):
+def test_todo_post_missing_required_params_3(django_app):
     # Preconditions: No TODOs created
     assert Todo.objects.count() == 0
 

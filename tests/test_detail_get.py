@@ -5,7 +5,7 @@ from todos_app.models import Todo
 
 
 @pytest.mark.django_db
-def test_todo_detail(django_app):
+def test_todo_detail_something(django_app):
     t1 = Todo.objects.create(title='Test Todo 1')
     t2 = Todo.objects.create(title='Test Todo 2', completed=True)
     t3 = Todo.objects.create(title='Test Todo 3')
@@ -39,5 +39,5 @@ def test_todo_detail(django_app):
 
 @pytest.mark.django_db
 def test_todo_detail_not_found(django_app):
-    resp = django_app.get('/api/todo/{}/'.format('XYZ'), status=404)
+    resp = django_app.get('/api/todo/{}/'.format('123456789'), status=404)
     assert resp.status_code == 404

@@ -6,7 +6,7 @@ from todos_app.models import Todo
 
 
 @pytest.mark.django_db
-def test_todo_detail_patch_values(django_app):
+def test_todo_detail_patch_values_1(django_app):
     t1 = Todo.objects.create(title='Test Todo 1')
     t2 = Todo.objects.create(title='Test Todo 2', completed=True)
     t3 = Todo.objects.create(title='Test Todo 3')
@@ -49,7 +49,7 @@ def test_todo_detail_patch_values(django_app):
 
 
 @pytest.mark.django_db
-def test_todo_detail_patch_action(django_app):
+def test_todo_detail_patch_action_2(django_app):
     t1 = Todo.objects.create(title='Test Todo 1')
     t2 = Todo.objects.create(title='Test Todo 2', completed=True)
     t3 = Todo.objects.create(title='Test Todo 3')
@@ -85,8 +85,8 @@ def test_todo_detail_patch_action(django_app):
 
 
 @pytest.mark.django_db
-def test_todo_detail_patch_not_found(django_app):
-    resp = django_app.patch('/api/todo/{}/'.format('XYZ'), params=json.dumps({
+def test_todo_detail_patch_not_found_3(django_app):
+    resp = django_app.patch('/api/todo/{}/'.format('1236549879821'), params=json.dumps({
         'title': 'NO TODO :()'
     }), content_type='application/json', status=404)
 
